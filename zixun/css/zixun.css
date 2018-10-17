@@ -1,0 +1,15 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#myZixun{
+	width: 97%;
+	background-color: white;
+	height: 500px;
+	margin: 15px auto 0;
+	padding-top: 10px;
+}
+
+#myZixun table td{
+	text-align: center;
+}

@@ -1,0 +1,55 @@
+#addWenzhangs{
+	background-color: white;
+	padding: 10px;
+	border: 1px solid #ccc;;
+	padding-left: 20px;
+}
+#addWenzhangs .header{
+	height: 50px;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	line-height: 50px;
+	text-align: center;
+
+}
+#addWenzhangs .body form>*{
+	display: block;
+	float: none;
+}
+#addWenzhangs .body form span{
+	float: none;
+	height: 40px;
+	line-height: 40px;
+}
+#addWenzhangs .body form>input,
+#addWenzhangs .body form>select{
+	width: 800px;
+	height: 30px;
+	border: 1px solid #ccc;
+}
+#addWenzhangs .body form .imgs>div{
+	display: inline-block;
+}
+#addWenzhangs .body form .imgs div img{
+	width: 300px;
+	display: inline-block;
+	margin-right: 30px;
+}
+#addWenzhangs .body form .wenzhangupload{
+	width: 200px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	color: blue;
+	border: 1px solid #ccc;
+}
+#addWenzhangs .body form textarea{
+	width: 95%;
+	height: 310px;
+	border: 1px solid #ccc;
+}
+#addWenzhangs .footer button{
+	margin-left:  820px;
+	margin-top: 15px;
+	display: block;
+}

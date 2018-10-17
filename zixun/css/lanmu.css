@@ -1,0 +1,31 @@
+/*栏目内容区域样式*/
+.lanmuContent{
+	width: 97%;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: 1px solid white;
+}
+.lanmuContent .btns{
+	margin:10px 0 0 10px;
+}
+.lanmuContent .btns button:last-child{
+	margin-left: 15px;
+}
+.lanmuContent .table{
+	width: 90%;
+	margin-top: 20px;
+	margin-left: 10px;
+	color: gray;
+}
+.lanmuContent .table tr th{
+	font-weight: normal;
+}
+.lanmuContent .table tr th,
+.lanmuContent .table tr td{
+	text-align: center;
+}
+.lanmuContent .modal form>*{
+	display: block;
+	float: none;
+}

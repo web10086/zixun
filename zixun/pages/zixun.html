@@ -1,0 +1,152 @@
+<div id="myZixun">
+	<div class="btns">
+		<div class="btn btn-success add">新增</div>
+		<div class="btn btn-success batchdelete">批量删除</div>
+	</div>
+	<div class="table">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<td>编号</td>
+					<td>文章标题</td>
+					<td>所属栏目</td>
+					<td>背景音乐</td>
+					<td>作者</td>
+					<td>发布时间</td>
+					<td>阅读次数</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="wenzhang hidden">
+					<td class="myid">
+						<span class="wenzhangid"></span>
+						<input type="checkbox" name="" class="wenzhangCheck">
+					</td>
+					<td class="mytitle"></td>
+					<td class="mycategory"></td>
+					<td class="mymusic"></td>
+					<td class="myauthor"></td>
+					<td class="mypublishtime"></td>
+					<td class="myreadtimes"></td>
+					<td class="mycaozuo">
+						<i class="glyphicon glyphicon-pencil updatewenzhang"></i>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<i class="glyphicon glyphicon-trash deleteById"></i>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--模态框开始 -->
+	<!-- <div class="modal show">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					发布资讯
+				</div>
+				<div class="modal-body">
+					<form>
+						<span>标题</span>
+						<input type="text" name="">
+						<span>所属栏目</span>
+						<select>
+							<option></option>
+						</select>
+						<span>列表样式</span>
+						<div class="imgs">
+							<div class="imgaa">
+								<img src="images/aa.jpg" alt="">
+							</div>
+							<div class="imgbb">
+								<img src="images/bb.jpg" alt="">
+							</div>
+						</div>
+						<span class="suolue">列表缩略图</span>
+						<div class="upload">
+							点击上传
+						</div>
+						<span>正文</span>
+						<textarea></textarea>
+
+
+
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div> -->
+	<!-- 模态框结束 -->
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		// console.log("哈哈，我有会回来了");
+		var o = {
+			page:0,
+			pageSize:1000
+		}
+		$.get("http://120.78.164.247:8099/manager/article/findArticle",o,function(results){
+			console.log(results);
+			var wenzhangs = results.data.list;
+			console.log(wenzhangs);
+			wenzhangs.forEach(function(item){
+				// console.log(item);
+				var cloneTr = $(".wenzhang:first").clone(true);
+				cloneTr.removeClass("hidden");
+				$(".wenzhangid")[0].innerHTML = item.id;
+				$(".mytitle")[0].innerHTML=item.title;
+				if(item.category){
+					$(".mycategory")[0].innerHTML=item.category.name;
+				}
+				$(".mymusic")[0].innerHTML=item.music;
+				$(".myauthor")[0].innerHTML=item.author;
+				$(".mypublishtime")[0].innerHTML=item.publishtime;
+				$(".myreadtimes")[0].innerHTML=item.readtimes;
+				// console.log("cloneTr",cloneTr);
+				$("tbody").append(cloneTr);
+				// console.log("显示");
+			});
+			$(".add").click(function(){
+				$(".rightDiv_content").load('pages/addWenzhang.html');
+			});
+		});
+		// deleteById
+		$(".deleteById").click(function(){
+			var wenzhangid = Number($(this).parent().parent().children()[0].children[0].innerHTML);
+			var o = {
+				id:wenzhangid
+			}
+			// console.log(wenzhangid);
+			$.get("http://120.78.164.247:8099/manager/article/deleteArticleById",o,function(results){
+				console.log("deleteById",results);
+				if(results.status === 200){
+					// alert();
+
+					$(".rightDiv_content").load('pages/zixun.html');
+				}
+			});
+		});
+		// batchdelete
+		$(".batchdelete").click(function(){
+			var ids = [];
+			$(".wenzhangCheck:checked").each(function(index,item){
+				var id=Number($(this).parent().children()[0].innerHTML);
+				ids.push(id);
+			});
+			console.log(ids);
+			$.post("http://120.78.164.247:8099/manager/article/batchDeleteArticle",ids,function(results){
+				console.log(results.status);
+				if(results.status === 200){
+					$(".rightDiv_content").load('pages/zixun.html');
+				}
+			});
+			//updatewenzhang
+			$('.updatewenzhang').click(function(){
+				$(".rightDiv_content").load('pages/addWenzhang.html');
+			});
+
+		});
+	});
+</script>

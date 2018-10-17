@@ -1,0 +1,248 @@
+
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+/*首页*/
+.leftDiv{
+	background-color:#282830;
+	padding: 0px
+	
+}
+
+.rightDiv{
+	background-color:#EEEEEE;
+	padding: 0px
+	
+}
+
+.leftDiv_top{
+	height: 50px;
+	width: 100%;
+	background-color: #3D556D;
+}
+
+.leftDiv_top img{
+	width: 40px;
+	height: 35px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.leftDiv_top div{
+	display: inline-block;
+}
+
+.leftDiv_top span{
+	color: #fff;
+	height: 50px;
+	display: inline-block;
+	line-height: 50px;
+	margin-left: 5px;
+}
+.rightDiv_content{
+	overflow: scroll;
+}
+/*首页左侧下半部分*/
+.leftDiv_bottom{
+	list-style:none;
+	margin-top: 40px;
+}
+.leftDiv_bottom li{
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.leftDiv_bottom li a{
+	color: #fff;
+}
+.leftDiv_bottom li span{
+	display: inline-block;
+	width: 90px;
+	margin-left: 5px;
+}
+
+/*右侧上半部分*/
+.rightDiv_top div{
+	height: 50px;
+}
+
+.rightDiv_top{
+	background-color: #fff;
+	height: 50px;
+}
+
+.rightDivTop_left{
+	padding: 0px;
+}
+
+.rightDivTop_left i{
+	margin-left: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+}
+
+.rightDivTop_left span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	position: relative;
+	left: -20px;
+	top: -5px;
+	font-size: 12px;
+}
+.rightDivTop_right{
+	padding: 0px;
+	line-height: 50px;
+}
+.rightDivTop_right div{
+	display: inline-block;
+
+}
+
+.rightDivTop_right img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px
+}
+
+
+
+/*首页内容区域*/
+
+.content_top{
+	width: 100%;
+	height: 250px;
+	padding: 20px
+}
+
+.content_top div{
+	height: 100%
+}
+
+div.one,div.two,div.three{
+	height: 55px;
+	background-color: #fff;
+	margin-top: 10px
+}
+
+div.cicleDiv{
+	width: 40px;
+	height: 40px;
+	background-color: #63BA12;
+	border-radius: 50%;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 10px;
+	text-align: center;
+}
+div.cicleDiv i{
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	font-size: 24px;
+
+
+}
+
+div.one span,div.two span,div.three span{
+	font-size: 24px;
+	font-weight: 500;
+	margin-left: 10px
+}
+
+div.cicleDiv1{
+	background-color: #7B2FC0
+}
+div.cicleDiv2{
+	background-color:#3BB8EC
+}
+
+div.contentTop_center div.zhexian{
+	background-color: #fff;
+	margin-top: 10px;
+	height: 185px
+}
+
+div.contentRight_top,div.contentRight_bottom{
+	height: 85px;
+	background-color: #fff;
+}
+
+div.contentRight_bottom{
+	margin-top: 15px;
+}
+
+div.contentRight_top{
+	margin-top: 10px
+}
+
+
+
+.content .content_bottom{
+	height: 350px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.content .content_bottom>div{
+	float: left;
+	width: 440px;
+	height: 100%;
+	margin-left: 15px;
+}
+.content .content_bottom .bottom_right{
+	margin-left: 25px;
+}
+.content .content_bottom .bottom_right>div{
+	float: left;
+}
+.content .content_bottom .bottom_right .bottomright_one{
+	width: 100%;
+	height: 200px;
+}
+.content .content_bottom .bottom_right .bottomright_two{
+	width: 100%;
+	height: 130px;
+	margin-top: 20px;
+}
+
+
+
+
+/*栏目内容区域*/
+
+.lanmuContent{
+	width: 97%;
+	background-color: #fff;
+	margin-top: 10px;
+	margin-left: 10px;
+	border:1px solid #fff;
+}
+
+div.btns{
+	margin-top: 10px;
+	margin-left: 10px
+}
+
+button{
+	margin-left: 10px
+}
+
+.lanmuContent table{
+	width: 90%;
+	margin: 20px
+}
+
+.lanmuContent table th,.lanmuContent table td{
+	text-align: center;
+}
+
